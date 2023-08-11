@@ -1,18 +1,16 @@
 // Write your JavaScript code here!
 
 window.addEventListener("load", function() {
+//TODO declare stuff for form submit function
     let form = document.querySelector('form');
     let list = document.getElementById("faultyItems");
     list.style.visibility = "hidden";
-//TODO declare stuff for form submit function
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-
         let pilotName = document.querySelector("input[name=pilotName]");
         let copilotName = document.querySelector("input[name=copilotName]");
         let fuelLevel = document.querySelector("input[name=fuelLevel]");
         let cargoMass = document.querySelector("input[name=cargoMass]");
-        
         formSubmission(document, list, pilotName.value, copilotName.value, fuelLevel.value, cargoMass.value);
     })
 
